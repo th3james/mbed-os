@@ -497,7 +497,8 @@ class ARM_MICRO(ARM):
             silent=False,
             extra_verbose=False,
             build_profile=None,
-            build_dir=None
+            build_dir=None,
+            coverage_patterns=None,
     ):
         target.default_toolchain = "uARM"
         if int(target.build_tools_metadata["version"]) > 0:
@@ -523,7 +524,8 @@ class ARM_MICRO(ARM):
             notify,
             macros,
             build_dir=build_dir,
-            build_profile=build_profile
+            build_profile=build_profile,
+            coverage_patterns=None,
         )
 
 
